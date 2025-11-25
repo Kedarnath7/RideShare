@@ -1,0 +1,15 @@
+.git
+.gitignore
+
+.idea
+.vscode
+
+frontend/
+
+target/
+*.class
+*.jar
+*.log
+
+.DS_Store
+Thumbs.db
