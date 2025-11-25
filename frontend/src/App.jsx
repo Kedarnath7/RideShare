@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
@@ -9,6 +10,15 @@ import CreateRide from "./pages/ride/CreateRide";
 import SearchRide from "./pages/ride/SearchRide";
 
 function App() {
+     useEffect(() => {
+             // Change the tab title
+             document.title = "RideShare";
+
+             const link = document.createElement("link");
+             link.rel = "icon";
+             link.href = "/favicon.ico";
+             document.head.appendChild(link);
+         }, []);
     return (
         <AuthProvider>
             <Router>
